@@ -22,8 +22,8 @@ static void sighandler( int signo){
     printError( write(fd, str, strlen(str)));
     printError( close(fd));
     
-    printf("\nInterrupt from keyboard\n\n");
-    exit(1);
+    printf("\nInterrupt from keyboard\n");
+    exit(0);
   }
   else if (signo == SIGUSR1)
     printf("\nParent Process PID: %d\n\n", getppid());
